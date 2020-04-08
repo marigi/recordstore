@@ -37,24 +37,24 @@
   */
 
 .input {
-  @apply appearance-none w-full rounded py-3 px-4 leading-tight;
+  @apply appearance-none block w-full bg-gray-100 text-gray-600 border border-gray-200 rounded py-3 px-4 leading-tight;
 }
 
 .input:focus {
-  @apply outline-none;
+  @apply outline-none bg-white border-gray-500;
 }
 
 .label {
-  @apply block uppercase tracking-wide text-xs font-bold mb-2;
+  @apply block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2;
 }
 
 .select {
-  @apply appearance-none py-3 px-4 pr-8 block w-full border rounded leading-tight;
+  @apply appearance-none py-3 px-4 pr-8 block w-full bg-gray-100 border border-gray-200 text-gray-600 rounded leading-tight;
   -webkit-appearance: none;
 }
 
 .select:focus {
-  @apply outline-none;
+  @apply outline-none bg-white border-gray-500;
 }
 
 .link {
@@ -62,11 +62,11 @@
 }
 
 .link-grey {
-  @apply ;
+  @apply text-gray-600;
 }
 
 .link-grey:hover {
-  @apply ;
+  @apply text-gray-600;
 }
 
 /**

@@ -7,13 +7,7 @@
         <div class="text-red" v-if="error">{{ error }}</div>
         <div class="mb-6">
           <label for="email" class="label">E-mail Address</label>
-          <input
-            type="email"
-            v-model="email"
-            class="input"
-            id="email"
-            placeholder="bmarigi@yahoo.com"
-          />
+          <input type="email" v-model="email" class="input" id="email" placeholder="user@email.com" />
         </div>
 
         <div class="mb-6">
@@ -23,7 +17,7 @@
 
         <button
           type="submit"
-          class="font-sans font-bold px-4 rounded cursor-pointer no-underline bg-green hover:bg-green-dark block w-full py-4 text-white items-center justify-center"
+          class="bg-green-500 hover:bg-green-700 text-white font-sans font-bold py-2 px-4 border border-blue-700 rounded w-full"
         >Sign In</button>
 
         <div class="my-4">

@@ -152,7 +152,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.2, >= 6.0.2.1)
-  redis (~> 4.0)
+  redis (~> 4.1)
   sqlite3 (~> 1.4)
   tzinfo-data
 
