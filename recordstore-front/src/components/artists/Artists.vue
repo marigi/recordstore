@@ -38,26 +38,27 @@
             </svg>
             {{ artist.name }}
           </p>
+          <div>
+            <button
+              class="bg-transparent text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              @click.prevent="editArtist(artist)"
+            >Edit</button>
 
-          <button
-            class="bg-tranparent text-sm hover:bg-blue hover:text-white text-blue border border-blue no-underline font-bold py-2 px-4 mr-2 rounded"
-            @click.prevent="editArtist(artist)"
-          >Edit</button>
-
-          <button
-            class="bg-transprent text-sm hover:bg-red text-red hover:text-white no-underline font-bold py-2 px-4 rounded border border-red"
-            @click.prevent="removeArtist(artist)"
-          >Delete</button>
+            <button
+              class="bg-transparent text-sm hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+              @click.prevent="removeArtist(artist)"
+            >Delete</button>
+          </div>
         </div>
 
         <div v-if="artist == editedArtist">
           <form action @submit.prevent="updateArtist(artist)">
-            <div class="mb-6 p-4 bg-white rounded border border-grey-light mt-4">
+            <div class="mb-6 p-4 bg-white rounded border border-grey-light">
               <input class="input" v-model="artist.name" />
               <input
                 type="submit"
                 value="Update"
-                class="my-2 bg-transparent text-sm hover:bg-blue hover:text-white text-blue border border-blue no-underline font-bold py-2 px-4 rounded cursor-pointer"
+                class="my-2 bg-transparent text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded cursor-pointer"
               />
             </div>
           </form>

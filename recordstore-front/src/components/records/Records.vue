@@ -50,10 +50,10 @@
 
     <hr class="border border-grey-light my-6" />
 
-    <ul class="list-reset mt-4">
+    <ul class="mt-4">
       <li class="py-4" v-for="record in records" :key="record.id" :record="record">
-        <div class="flex items-center justify-between flex-wrap">
-          <div class="flex-1 flex justify-between flex-wrap pr-4">
+        <div class="flex items-center justify-between flex-wrap bg-gray-100">
+          <div class="flex-1 flex justify-between flex-wrap pr-4 bg-gray-300">
             <p class="block font-mono font-semibold flex items-center">
               <svg
                 class="fill-current text-indigo w-6 h-6 mr-2"
@@ -70,15 +70,17 @@
             </p>
             <p class="block font-mono font-semibold">{{ getArtist(record) }}</p>
           </div>
-          <button
-            class="bg-transparent text-sm hover:bg-blue hover:text-white text-blue border border-blue no-underline font-bold py-2 px-4 mr-2 rounded"
-            @click.prevent="editRecord(record)"
-          >Edit</button>
+          <div>
+            <button
+              class="bg-transparent text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              @click.prevent="editRecord(record)"
+            >Edit</button>
 
-          <button
-            class="bg-transparent text-sm hover:bg-red text-red hover:text-white no-underline font-bold py-2 px-4 rounded border border-red"
-            @click.prevent="removeRecord(record)"
-          >Delete</button>
+            <button
+              class="bg-transparent text-sm hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+              @click.prevent="removeRecord(record)"
+            >Delete</button>
+          </div>
         </div>
 
         <div v-if="record == editedRecord">
@@ -108,7 +110,7 @@
               <input
                 type="submit"
                 value="Update"
-                class="bg-transparent text-sm hover:bg-blue hover:text-white text-blue border border-blue no-underline font-bold py-2 px-4 mr-2 rounded"
+                class="bg-transparent text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded cursor-pointer"
               />
             </div>
           </form>
