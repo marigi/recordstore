@@ -13,7 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "growl": "^1.10.5",
     "js-yaml": "^3.13.1",
     "minimist": "^1.2.5",
